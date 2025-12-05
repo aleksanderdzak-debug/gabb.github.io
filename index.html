@@ -14,7 +14,7 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: "Segoe UI", system-ui, sans-serif;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -63,19 +63,21 @@
 
         .card-header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            gap: 0.45rem;
             margin-bottom: 1.5rem;
-            gap: 0.75rem;
         }
 
         .title {
-            font-size: 1.35rem;
+            font-size: 1.55rem;
             font-weight: 700;
             letter-spacing: 0.06em;
             text-transform: uppercase;
             color: #ffd700;
+            font-family: "Arial", serif;
             text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+            text-align: center;
         }
 
         .badge {
@@ -84,13 +86,16 @@
             gap: 0.35rem;
             background: rgba(0, 0, 0, 0.35);
             border-radius: 999px;
-            padding: 0.3rem 0.8rem;
-            font-size: 0.8rem;
+            padding: 0.35rem 1rem;
+            font-size: 0.82rem;
             border: 1px solid rgba(255, 215, 0, 0.7);
+            text-align: center;
+            color: #ffd700;
+            font-family: "Arial", serif;
         }
 
         .badge span.icon {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
 
         .steps-indicator {
@@ -125,17 +130,21 @@
         }
 
         .message {
-            font-size: 1.3rem;
-            line-height: 1.4;
+            font-size: 1.35rem;
+            line-height: 1.45;
+            font-family: "Arial", serif;
         }
 
         .message strong {
             color: #ffd700;
+            font-weight: 700;
         }
 
         .subtext {
             font-size: 0.95rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            font-style: italic;
+            font-family: "Arial", serif;
         }
 
         .art-row {
@@ -158,20 +167,17 @@
             border: none;
             outline: none;
             cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            padding: 0.85rem 1.8rem;
+            font-size: 1.05rem;
+            font-weight: bold;
+            padding: 0.9rem 2.1rem;
             border-radius: 999px;
             background: linear-gradient(135deg, #ffd700, #ffb400);
             color: #5a0000;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
             text-decoration: none;
             transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-family: "Arial", serif;
+            letter-spacing: 0.04em;
         }
 
         button:hover,
@@ -181,20 +187,17 @@
             filter: brightness(1.05);
         }
 
-        button:active,
-        a.download-link:active {
-            transform: translateY(1px) scale(0.98);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-        }
-
         .download-link span {
             font-size: 1.1rem;
         }
 
         .note {
-            margin-top: 1rem;
-            font-size: 0.8rem;
-            opacity: 0.8;
+            margin-top: 1.1rem;
+            font-size: 0.95rem;
+            opacity: 0.88;
+            font-family: "Arial", serif;
+            text-align: center;
+            color: #ffe8c7;
         }
 
         @media (max-width: 480px) {
@@ -203,7 +206,7 @@
             }
 
             .message {
-                font-size: 1.15rem;
+                font-size: 1.2rem;
             }
 
             .art-row {
@@ -211,6 +214,7 @@
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -329,7 +333,7 @@
       `;
 
             actionsEl.innerHTML = `
-        <a class="download-link" href="gift.pdf" download>
+        <a class="download-link" href="x.png" download>
           <span>⬇️</span>
           <span>Pobierz PDF</span>
         </a>
